@@ -7,7 +7,7 @@ nextjs base personal portfolio site.
   - ~~Gulp.js~~
   - ~~SCSS/SASS~~
   - ~~i18next for localization~~
-  - theme control with next-theme
+  - ~~theme control with next-theme~~
 - Pages/Routes:
   - Greeter
     - User will be presented with a choice whether he wants to go classic page style or CLI

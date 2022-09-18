@@ -1,18 +1,16 @@
 import type { NextPage } from "next";
 import { useTranslation } from "next-i18next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Greeter from "../components/Greeter/Greeter";
 import ThemeToggler from "../components/ThemeToggler/ThemeToggler";
+
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
 
   return (
     <div>
-      <span>{t("test")}</span>
-      <ThemeToggler />
+      <Greeter />
     </div>
   );
 };
