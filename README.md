@@ -6,7 +6,7 @@ nextjs base personal portfolio site.
   - ~~Husky.js with pretty-quick linter~~
   - ~~Gulp.js~~
   - ~~SCSS/SASS~~
-  - i18next for localization
+  - ~~i18next for localization~~
   - theme control with next-theme
 - Pages/Routes:
   - Greeter
