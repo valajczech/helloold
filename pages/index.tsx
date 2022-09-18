@@ -5,10 +5,16 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import ThemeToggler from "../components/ThemeToggler/ThemeToggler";
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
 
-  return <div>{t("test")}</div>;
+  return (
+    <div>
+      <span>{t("test")}</span>
+      <ThemeToggler />
+    </div>
+  );
 };
 export async function getStaticProps({ locale }: any) {
   return {
