@@ -1,0 +1,17 @@
+@import "../../styles/variables.module.scss";
+
+.commandline {
+  padding: $inner-padding;
+  .prompt {
+    display: flex;
+
+    input {
+      border: solid 2px transparent;
+      background-color: transparent;
+    }
+  }
+  .boot {
+    display: flex;
+    flex-direction: column;
+  }
+}
