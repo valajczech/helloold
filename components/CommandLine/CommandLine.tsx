@@ -37,9 +37,12 @@ const SequenceElement = (props: { text: string }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsVisible((prev) => true);
-      console.log(delay);
     }, delay);
   }, []);
+
+  useEffect(() => {
+    isVisible ? window.scrollTo(0, document.body.scrollHeight) : "";
+  }, [isVisible]);
 
   return isVisible ? (
     <div>
