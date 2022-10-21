@@ -6,11 +6,19 @@
     display: flex;
 
     input {
-      border: solid 2px transparent;
+      border: none;
+      padding: 0px;
       background-color: transparent;
+      outline: none;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 15px;
     }
   }
   .boot {
+    display: flex;
+    flex-direction: column;
+  }
+  .list {
     display: flex;
     flex-direction: column;
   }

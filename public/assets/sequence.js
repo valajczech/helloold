@@ -191,6 +191,7 @@ const SEQUENCE_TEXT = [
   "[   11.810617] random: nonblocking pool is initialized\n",
   "[   11.849114] Driver for 1-wire Dallas network protocol.\n",
   "[   12.167722] i2c /dev entries driver",
+  "Done.",
 ];
 
 export default SEQUENCE_TEXT;
