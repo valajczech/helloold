@@ -9,7 +9,7 @@ import { ICommand } from "../../utils/interfaces";
 const CommandLine = () => {
   const [isBooted, setIsBooted] = useState<boolean>(false);
   const [history, addCmdToHistory] = useState<Array<ICommand>>([]);
-
+  const [enteredText, setEnteredText] = useState<string | null>(" ");
   // Refs
   const promptInput = useRef<HTMLInputElement>(null);
   const scrollElRef = useRef<HTMLDivElement>(null);
@@ -18,21 +18,13 @@ const CommandLine = () => {
     promptInput.current?.focus();
   }, []);
 
-  const resolveCommand = (command: string) => {
-    //! Perform search and other stuff
-    let resolvedCommand = commands.find((c) => c.name == command);
-    if (typeof resolvedCommand !== undefined) {
-      //@ts-ignore
-      addCmdToHistory((prev) => [...prev, resolvedCommand]);
-    }
-
-    // Focus on the input and scroll down
-    scrollToBottom();
-    promptInput.current?.focus();
-  };
-
   const scrollToBottom = () => {
     scrollElRef.current?.scrollTo(0, scrollElRef.current.scrollHeight);
+  };
+
+  const resolveCommand = (cmd: string | null) => {
+    console.log(cmd);
+    setEnteredText((prev) => null);
   };
 
   return (
@@ -68,11 +60,24 @@ const CommandLine = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            let cmd = promptInput.current?.value;
-            cmd === undefined ? resolveCommand("") : resolveCommand(cmd);
+            let cmd = promptInput.current?.value.toLowerCase().trim();
+
+            if (cmd !== undefined) {
+              resolveCommand(cmd);
+            } else {
+              resolveCommand(null);
+            }
           }}
         >
-          <input type="text" spellCheck="false" ref={promptInput} />
+          <input
+            type="text"
+            value={enteredText || ""}
+            spellCheck="false"
+            onChange={(e) => {
+              setEnteredText((prev) => e.currentTarget.value);
+            }}
+            ref={promptInput}
+          />
         </form>
       </div>
     </div>
