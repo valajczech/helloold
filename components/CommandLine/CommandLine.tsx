@@ -2,7 +2,7 @@ import Prompt from "../Prompt";
 import styles from "./CommandLine.module.scss";
 
 import BOOT_SEQUENCE from "../../public/assets/sequence.js";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import commands from "../../utils/commands";
 import { ICommand } from "../../utils/interfaces";
 
@@ -12,6 +12,7 @@ const CommandLine = () => {
 
   // Refs
   const promptInput = useRef<HTMLInputElement>(null);
+  const scrollElRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     promptInput.current?.focus();
@@ -26,8 +27,12 @@ const CommandLine = () => {
     }
 
     // Focus on the input and scroll down
-    window.scrollTo(0, document.body.scrollHeight);
+    scrollToBottom();
     promptInput.current?.focus();
+  };
+
+  const scrollToBottom = () => {
+    scrollElRef.current?.scrollTo(0, scrollElRef.current.scrollHeight);
   };
 
   return (
@@ -38,14 +43,24 @@ const CommandLine = () => {
         promptInput.current?.focus();
       }}
     >
-      <div className="outputs">
-        <div className={styles.boot}>
-          {isBooted ? "" : <BootSequence endHandler={() => {}} />}
-        </div>
-        <div className={styles.list}>
-          {history.map((c) => {
-            return c?.output;
-          })}
+      <div className={styles.outputs}>
+        <div className={styles.history} ref={scrollElRef}>
+          <div className={styles.boot}>
+            {isBooted ? (
+              ""
+            ) : (
+              <BootSequence
+                updateHandler={() => {
+                  scrollToBottom();
+                }}
+              />
+            )}
+          </div>
+          <div className={styles.list}>
+            {history.map((c) => {
+              return c?.output;
+            })}
+          </div>
         </div>
       </div>
       <div className={styles.prompt}>
@@ -70,21 +85,30 @@ export default CommandLine;
 
 const BootSequence = (props: {
   startHandler?: () => any;
-  endHandler: () => any;
+  endHandler?: () => any;
+  updateHandler: () => any;
 }) => {
   return (
-    <div className="outputs">
+    <div className="boot-outputs">
       {BOOT_SEQUENCE.map((d, i) => {
-        if (i + 1 == BOOT_SEQUENCE.length) {
-          props.endHandler();
-        }
-        return <SequenceElement text={d} delay={i} key={i} />;
+        return (
+          <SequenceElement
+            text={d}
+            delay={i}
+            key={i}
+            updateHandler={() => props.updateHandler()}
+          />
+        );
       })}
     </div>
   );
 };
 
-const SequenceElement = (props: { text: string; delay: number }) => {
+const SequenceElement = (props: {
+  text: string;
+  delay: number;
+  updateHandler: () => any;
+}) => {
   const delay = props.delay * 50;
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -96,6 +120,7 @@ const SequenceElement = (props: { text: string; delay: number }) => {
 
   useEffect(() => {
     isVisible ? window.scrollTo(0, document.body.scrollHeight) : "";
+    props.updateHandler();
   }, [isVisible]);
 
   return isVisible ? (

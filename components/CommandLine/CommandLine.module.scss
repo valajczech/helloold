@@ -1,10 +1,19 @@
 @import "../../styles/variables.module.scss";
 
 .commandline {
-  padding: $inner-padding;
+  .outputs {
+    .history {
+      height: 95vh;
+      overflow-y: scroll;
+    }
+    .list {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
   .prompt {
     display: flex;
-
+    gap: 10px;
     input {
       border: none;
       padding: 0px;
@@ -13,13 +22,5 @@
       font-family: "JetBrains Mono", monospace;
       font-size: 15px;
     }
-  }
-  .boot {
-    display: flex;
-    flex-direction: column;
-  }
-  .list {
-    display: flex;
-    flex-direction: column;
   }
 }
