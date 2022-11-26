@@ -1,0 +1,43 @@
+@import "../../styles/variables.module.scss";
+
+.classicRoute {
+  .landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    overflow-y: hidden;
+    flex-direction: column;
+    .meet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      margin: 50px;
+      cursor: pointer;
+      svg {
+        transition-duration: $duration;
+      }
+      &:hover {
+        svg {
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+  .about {
+    display: flex;
+    padding: $classic-section-padding;
+    gap: $classic-section-padding;
+    .aboutText {
+      width: 500px;
+    }
+    .portrait {
+      filter: grayscale(1);
+      width: 150px;
+      height: auto;
+    }
+  }
+}

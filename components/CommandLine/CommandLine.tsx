@@ -1,4 +1,4 @@
-import Prompt from "../Prompt";
+import Prompt from "../Prompt/Prompt";
 import styles from "./CommandLine.module.scss";
 
 import BOOT_SEQUENCE from "../../public/assets/sequence.js";
