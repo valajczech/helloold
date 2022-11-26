@@ -9,7 +9,7 @@ import { ICommand } from "../../utils/interfaces";
 const CommandLine = () => {
   const [isBooted, setIsBooted] = useState<boolean>(false);
   const [history, addCmdToHistory] = useState<Array<ICommand>>([]);
-  const [enteredText, setEnteredText] = useState<string | null>(" ");
+  const [enteredText, setEnteredText] = useState<string>("");
   // Refs
   const promptInput = useRef<HTMLInputElement>(null);
   const scrollElRef = useRef<HTMLDivElement>(null);
@@ -22,9 +22,9 @@ const CommandLine = () => {
     scrollElRef.current?.scrollTo(0, scrollElRef.current.scrollHeight);
   };
 
-  const resolveCommand = (cmd: string | null) => {
+  const resolveCommand = (cmd: string) => {
     console.log(cmd);
-    setEnteredText((prev) => null);
+    setEnteredText((prev) => "");
   };
 
   return (
@@ -65,16 +65,16 @@ const CommandLine = () => {
             if (cmd !== undefined) {
               resolveCommand(cmd);
             } else {
-              resolveCommand(null);
+              resolveCommand("");
             }
           }}
         >
           <input
             type="text"
-            value={enteredText || ""}
+            value={enteredText}
             spellCheck="false"
             onChange={(e) => {
-              setEnteredText((prev) => e.currentTarget.value);
+              setEnteredText((prev) => e.target.value);
             }}
             ref={promptInput}
           />

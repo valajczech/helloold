@@ -5,6 +5,9 @@
     .history {
       height: 95vh;
       overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
     .list {
       display: flex;
