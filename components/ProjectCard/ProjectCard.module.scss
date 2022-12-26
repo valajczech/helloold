@@ -1,0 +1,26 @@
+@import "../../styles//variables.module.scss";
+
+.projectCard {
+  margin: $outer-margin;
+  border-radius: $radius;
+  padding: $inner-padding;
+  .top {
+    span {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $text-faded-gray;
+    }
+  }
+  .info {
+    margin: $inner-padding 0px;
+  }
+  .image {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: $radius;
+  }
+}

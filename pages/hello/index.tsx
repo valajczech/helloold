@@ -12,6 +12,7 @@ import portrait from "../../public/assets/portrait.jpg";
 import { motion } from "framer-motion";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import Image from "next/image";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 const ClassicRoute: NextPage = () => {
   return (
@@ -44,8 +45,11 @@ const ClassicRoute: NextPage = () => {
             }}
           >
             <div className={styles.meet}>
-              <span>Let's meet.</span>
-              <FaArrowDown />
+              <span className={styles.scroll_btn}>
+                <span className={styles.mouse}>
+                  <span></span>
+                </span>
+              </span>
             </div>
           </motion.div>
         </div>
@@ -80,15 +84,60 @@ const ClassicRoute: NextPage = () => {
             </p>
           </Parallax>
           <Parallax speed={80}>
-            <Image
-              src={portrait}
-              className={styles.portrait}
-              height={640}
-              width={380}
-            />
+            <div className={styles.portraitWrapper}>
+              <Image
+                src={portrait}
+                className={styles.portrait}
+                height={640}
+                width={380}
+              />
+            </div>
           </Parallax>
         </div>
-        <div className={styles.projects}></div>
+        <div className={styles.projects}>
+          <Parallax speed={5}>
+            <span className={styles.header_small}>
+              Projects & contributions.
+            </span>
+          </Parallax>
+          <div className={styles.projectList}>
+            <div className={styles.left}>
+              <Parallax speed={3}>
+                <ProjectCard
+                  number="2"
+                  title="Project two"
+                  shortDescription="x"
+                  img={portrait}
+                />
+                <ProjectCard
+                  number="4"
+                  title="Project four"
+                  shortDescription="x"
+                  img={portrait}
+                />
+              </Parallax>
+            </div>
+            <div className={styles.right}>
+              <Parallax speed={40}>
+                <ProjectCard
+                  number="1"
+                  title="Project one"
+                  shortDescription="x"
+                  img={portrait}
+                />
+                <ProjectCard
+                  number="3"
+                  title="Project three"
+                  shortDescription="x"
+                  img={portrait}
+                />
+              </Parallax>
+            </div>
+          </div>
+        </div>
+        <div className={styles.cv}>
+          <Button text="Download CV" />
+        </div>
       </div>
     </ParallaxProvider>
   );
