@@ -31,7 +31,7 @@ const SocialList = () => {
           <FaMailBulk />
         </Link>
         <Link
-          href={"/https://www.linkedin.com/in/ji%C5%99%C3%AD-vala-b7261b1ab/"}
+          href={"https://www.linkedin.com/in/ji%C5%99%C3%AD-vala-b7261b1ab/"}
           target={"_blank"}
         >
           <FaLinkedin />
