@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import Image from "next/image";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import SocialList from "../../components/SocialList/SocialList";
 
 const ClassicRoute: NextPage = () => {
   return (
@@ -105,13 +106,13 @@ const ClassicRoute: NextPage = () => {
               <Parallax speed={3}>
                 <ProjectCard
                   number="2"
-                  title="Project two"
+                  title="Baic.cz"
                   shortDescription="x"
                   img={portrait}
                 />
                 <ProjectCard
                   number="4"
-                  title="Project four"
+                  title="Talense.com"
                   shortDescription="x"
                   img={portrait}
                 />
@@ -121,19 +122,22 @@ const ClassicRoute: NextPage = () => {
               <Parallax speed={40}>
                 <ProjectCard
                   number="1"
-                  title="Project one"
+                  title="Website & CMS for an amateur photographer"
                   shortDescription="x"
                   img={portrait}
                 />
                 <ProjectCard
                   number="3"
-                  title="Project three"
+                  title="Activity Reporting App"
                   shortDescription="x"
                   img={portrait}
                 />
               </Parallax>
             </div>
           </div>
+        </div>
+        <div className={styles.social}>
+          <SocialList />
         </div>
         <div className={styles.cv}>
           <Button text="Download CV" />
