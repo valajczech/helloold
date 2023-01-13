@@ -6,7 +6,16 @@ import styles from "./index.module.scss";
 import Button from "../../components/Button/Button";
 
 //Assets
-import { FaArrowDown } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiFirebase,
+  SiJavascript,
+  SiSpring,
+  SiCsharp,
+  SiDotnet,
+} from "react-icons/si";
+import { FaCss3, FaHtml5, FaReact, FaSass } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
 import portrait from "../../public/assets/portrait.jpg";
 // Animation libratires
 import { motion } from "framer-motion";
@@ -106,13 +115,43 @@ const ClassicRoute: NextPage = () => {
               <Parallax speed={3}>
                 <ProjectCard
                   number="2"
-                  title="Baic.cz"
+                  inProgress={false}
+                  title="BAIC.CZ"
+                  shortDescription="x"
+                  img={portrait}
+                  techstack={[
+                    <FaReact />,
+                    <SiTypescript />,
+                    <FaSass />,
+                    <SiFirebase />,
+                    <SiSpring />,
+                  ]}
+                />
+                <ProjectCard
+                  number="4"
+                  techstack={[
+                    <FaReact />,
+                    <TbBrandNextjs />,
+                    <SiTypescript />,
+                    <FaSass />,
+                    <SiFirebase />,
+                    <SiSpring />,
+                  ]}
+                  inProgress
+                  title="TALENSE"
                   shortDescription="x"
                   img={portrait}
                 />
                 <ProjectCard
-                  number="4"
-                  title="Talense.com"
+                  number="6"
+                  techstack={[
+                    <SiJavascript />,
+                    <FaCss3 />,
+                    <SiCsharp />,
+                    <SiDotnet />,
+                  ]}
+                  inProgress
+                  title="ePIC by Twinformatics"
                   shortDescription="x"
                   img={portrait}
                 />
@@ -122,15 +161,40 @@ const ClassicRoute: NextPage = () => {
               <Parallax speed={40}>
                 <ProjectCard
                   number="1"
-                  title="Website & CMS for an amateur photographer"
+                  title="PORTFOLIO & CMS FOR PHOTOGRAPHER"
                   shortDescription="x"
+                  inProgress={false}
                   img={portrait}
+                  techstack={[
+                    <FaReact />,
+                    <SiJavascript />,
+                    <FaSass />,
+                    <FaHtml5 />,
+                    <FaCss3 />,
+                    <SiFirebase />,
+                  ]}
                 />
                 <ProjectCard
                   number="3"
-                  title="Activity Reporting App"
+                  inProgress
+                  title="ACTIVITY REPORTING APP"
                   shortDescription="x"
                   img={portrait}
+                  techstack={[
+                    <FaReact />,
+                    <SiTypescript />,
+                    <FaSass />,
+                    <SiFirebase />,
+                    <SiSpring />,
+                  ]}
+                />
+                <ProjectCard
+                  number="5"
+                  inProgress={false}
+                  title="TownOut"
+                  shortDescription=""
+                  img={portrait}
+                  techstack={[<SiJavascript />, <FaHtml5 />, <FaCss3 />]}
                 />
               </Parallax>
             </div>

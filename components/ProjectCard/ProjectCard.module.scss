@@ -6,13 +6,52 @@
   padding: $inner-padding;
   .top {
     span {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 600;
       color: $text-faded-gray;
     }
   }
   .info {
     margin: $inner-padding 0px;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-weight: 600;
+      font-size: 1.5rem;
+      transition-duration: $duration;
+    }
+    .tags {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 5px 0px;
+      .inProgress {
+        padding: 2px 7px;
+        background-color: #2c9935;
+        border-radius: $radius;
+        color: $white;
+        width: fit-content;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .completed {
+        padding: 2px 7px;
+        background-color: $main-blue;
+        border-radius: $radius;
+        color: $white;
+        width: fit-content;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .techstack {
+        display: flex;
+        gap: 10px;
+        svg {
+          font-size: 25px;
+          color: $text-faded-gray;
+        }
+      }
+    }
   }
   .image {
     width: 500px;
@@ -22,5 +61,10 @@
     align-items: center;
     cursor: pointer;
     border-radius: $radius;
+  }
+  &:hover {
+    .title {
+      filter: drop-shadow(0px 0px 50px $main-blue);
+    }
   }
 }
