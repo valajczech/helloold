@@ -1,9 +1,10 @@
 import Image, { StaticImageData } from "next/image";
+import Button from "../Button/Button";
 import styles from "./ProjectCard.module.scss";
 
 interface IProjectCardProps {
   title: string;
-  shortDescription: string;
+  shortDescription?: string;
   number: string;
   techstack?: Array<JSX.Element>;
   img: string | StaticImageData;
@@ -35,6 +36,9 @@ const ProjectCard = (props: IProjectCardProps) => {
       <div className="desc">{props.shortDescription}</div>
       <div className={styles.image}>
         <Image src={props.img} />
+        <div className={styles.readMore}>
+          <Button text="Read More" theme="light" />
+        </div>
       </div>
     </div>
   );

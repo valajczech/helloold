@@ -1,3 +1,5 @@
+import { HTMLAttributes, useEffect, useState } from "react";
+import { render } from "react-dom";
 import style from "./Button.module.scss";
 
 interface IButtonProps {
@@ -11,17 +13,60 @@ interface IButtonProps {
 }
 
 const Button = (props: IButtonProps) => {
-  return (
-    <button
-      className={style.button}
-      onClick={() => {
-        props.onClick != undefined ? props.onClick() : "";
-      }}
-    >
-      {props.icon}
-      {props.text}
-    </button>
-  );
+  switch (props.theme) {
+    case "mainColor": {
+      return (
+        <button
+          className={style.button}
+          onClick={() => {
+            props.onClick != undefined ? props.onClick() : "";
+          }}
+        >
+          {props.icon}
+          {props.text}
+        </button>
+      );
+    }
+    case "dark": {
+      return (
+        <button
+          className={style.buttonDark}
+          onClick={() => {
+            props.onClick != undefined ? props.onClick() : "";
+          }}
+        >
+          {props.icon}
+          {props.text}
+        </button>
+      );
+    }
+    case "light": {
+      return (
+        <button
+          className={style.buttonLight}
+          onClick={() => {
+            props.onClick != undefined ? props.onClick() : "";
+          }}
+        >
+          {props.icon}
+          {props.text}
+        </button>
+      );
+    }
+    default: {
+      return (
+        <button
+          className={style.button}
+          onClick={() => {
+            props.onClick != undefined ? props.onClick() : "";
+          }}
+        >
+          {props.icon}
+          {props.text}
+        </button>
+      );
+    }
+  }
 };
 
 export default Button;

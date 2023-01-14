@@ -117,7 +117,6 @@ const ClassicRoute: NextPage = () => {
                   number="2"
                   inProgress={false}
                   title="BAIC.CZ"
-                  shortDescription="x"
                   img={portrait}
                   techstack={[
                     <FaReact />,
@@ -139,7 +138,6 @@ const ClassicRoute: NextPage = () => {
                   ]}
                   inProgress
                   title="TALENSE"
-                  shortDescription="x"
                   img={portrait}
                 />
                 <ProjectCard
@@ -152,7 +150,6 @@ const ClassicRoute: NextPage = () => {
                   ]}
                   inProgress
                   title="ePIC by Twinformatics"
-                  shortDescription="x"
                   img={portrait}
                 />
               </Parallax>
@@ -162,7 +159,6 @@ const ClassicRoute: NextPage = () => {
                 <ProjectCard
                   number="1"
                   title="PORTFOLIO & CMS FOR PHOTOGRAPHER"
-                  shortDescription="x"
                   inProgress={false}
                   img={portrait}
                   techstack={[
@@ -178,7 +174,6 @@ const ClassicRoute: NextPage = () => {
                   number="3"
                   inProgress
                   title="ACTIVITY REPORTING APP"
-                  shortDescription="x"
                   img={portrait}
                   techstack={[
                     <FaReact />,
@@ -192,7 +187,6 @@ const ClassicRoute: NextPage = () => {
                   number="5"
                   inProgress={false}
                   title="TownOut"
-                  shortDescription=""
                   img={portrait}
                   techstack={[<SiJavascript />, <FaHtml5 />, <FaCss3 />]}
                 />

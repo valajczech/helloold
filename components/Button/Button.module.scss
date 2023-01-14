@@ -1,22 +1,35 @@
 @import "../../styles/variables.module.scss";
 
-.button {
+@mixin button {
   display: flex;
   gap: 10px;
   flex-wrap: nowrap;
   text-align: center;
-  background-color: $main-blue-accent;
-  border: solid $main-blue 2px;
   border-radius: $radius;
   padding: $inner-padding;
-  color: $main-blue;
   cursor: pointer;
   font-weight: 700;
-
   transition-duration: $duration;
+}
 
+.button {
+  @include button;
+  background-color: $main-blue-accent;
+  border: solid $main-blue 2px;
+  color: $main-blue;
   &:hover {
     color: $white;
     background-color: $main-blue;
+  }
+}
+
+.buttonLight {
+  @include button;
+  background-color: transparent;
+  border: solid $white 2px;
+  color: $white;
+  &:hover {
+    color: $black;
+    background-color: $white;
   }
 }
