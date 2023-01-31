@@ -77,13 +77,7 @@
     }
   }
   &:hover {
-    .title {
-      filter: drop-shadow(0px 0px 50px $main-blue);
-    }
     .image {
-      img {
-        filter: grayscale(1) blur(5px);
-      }
       .readMore {
         opacity: 1;
       }

@@ -21,6 +21,8 @@ import ar from "../../public/assets/ar_miniature.png";
 import baic from "../../public/assets/baic_miniature.png";
 import bures from "../../public/assets/bures_miniature.png";
 import townout from "../../public/assets/townout_miniature.png";
+import talense from "../../public/assets/talense_miniature.png";
+
 // Animation libratires
 import { motion } from "framer-motion";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
@@ -72,30 +74,24 @@ const ClassicRoute: NextPage = () => {
             <span className={styles.header_small}>About.</span>
           </Parallax>
           <Parallax speed={10} className={styles.aboutText}>
+            <p>Hello,</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
+              I am a young, mostly self-learned fullstack developer with main
+              focus on Javascript/Typescript based technologies which im most
+              experienced in, but from time to time I wander to utterly
+              different stuff, for example Python or Arduino/Raspberry Pi.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
+              Mostly I specialize in building and deploying web applications,
+              but I have developed a few websites.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
+              Alongside building (web)applications, I am a total petrolhead and
+              I love cars & motorycles. I also do a fair bit of travelling and
+              adventurism.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
-            </p>
+
+            <p>Scroll down to see my latest projects !</p>
           </Parallax>
           <Parallax speed={80}>
             <div className={styles.portraitWrapper}>
@@ -140,7 +136,7 @@ const ClassicRoute: NextPage = () => {
                   ]}
                   inProgress
                   title="TALENSE"
-                  img={portrait}
+                  img={talense}
                 />
                 <ProjectCard
                   number="6"
