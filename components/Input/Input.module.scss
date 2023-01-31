@@ -1,0 +1,46 @@
+@import "../../styles/variables.module.scss";
+
+@mixin input {
+  border-radius: $radius;
+  padding: $inner-padding;
+  cursor: pointer;
+  font-weight: 700;
+  transition-duration: $duration;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.input {
+  @include input;
+  border-color: $text-faded-gray;
+  width: 100%;
+  background-color: inherit;
+  border-color: transparent;
+  outline: none;
+}
+
+.inputWithFixedPlaceholder {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-color: $text-faded-gray;
+  border-radius: $radius;
+  padding: 0px 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition-duration: $duration;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+
+  span {
+    word-break: keep-all;
+  }
+
+  input {
+    background-color: inherit;
+    border-color: transparent;
+    outline: none;
+  }
+}

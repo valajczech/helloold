@@ -4,6 +4,7 @@
   margin: $outer-margin;
   border-radius: $radius;
   padding: $inner-padding;
+  border-color: red;
   .top {
     span {
       font-size: 1.5rem;
@@ -63,6 +64,7 @@
     position: relative;
     img {
       transition-duration: $duration;
+      border-radius: $radius;
     }
     .readMore {
       cursor: pointer;
@@ -79,6 +81,9 @@
       filter: drop-shadow(0px 0px 50px $main-blue);
     }
     .image {
+      img {
+        filter: grayscale(1) blur(5px);
+      }
       .readMore {
         opacity: 1;
       }

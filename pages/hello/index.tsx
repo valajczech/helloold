@@ -17,6 +17,10 @@ import {
 import { FaCss3, FaHtml5, FaReact, FaSass } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import portrait from "../../public/assets/portrait.jpg";
+import ar from "../../public/assets/ar_miniature.png";
+import baic from "../../public/assets/baic_miniature.png";
+import bures from "../../public/assets/bures_miniature.png";
+import townout from "../../public/assets/townout_miniature.png";
 // Animation libratires
 import { motion } from "framer-motion";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
@@ -117,7 +121,7 @@ const ClassicRoute: NextPage = () => {
                   number="2"
                   inProgress={false}
                   title="BAIC.CZ"
-                  img={portrait}
+                  img={baic}
                   techstack={[
                     <FaReact />,
                     <SiTypescript />,
@@ -133,8 +137,6 @@ const ClassicRoute: NextPage = () => {
                     <TbBrandNextjs />,
                     <SiTypescript />,
                     <FaSass />,
-                    <SiFirebase />,
-                    <SiSpring />,
                   ]}
                   inProgress
                   title="TALENSE"
@@ -160,7 +162,7 @@ const ClassicRoute: NextPage = () => {
                   number="1"
                   title="PORTFOLIO & CMS FOR PHOTOGRAPHER"
                   inProgress={false}
-                  img={portrait}
+                  img={bures}
                   techstack={[
                     <FaReact />,
                     <SiJavascript />,
@@ -174,7 +176,7 @@ const ClassicRoute: NextPage = () => {
                   number="3"
                   inProgress
                   title="ACTIVITY REPORTING APP"
-                  img={portrait}
+                  img={ar}
                   techstack={[
                     <FaReact />,
                     <SiTypescript />,
@@ -187,8 +189,20 @@ const ClassicRoute: NextPage = () => {
                   number="5"
                   inProgress={false}
                   title="TownOut"
-                  img={portrait}
+                  img={townout}
                   techstack={[<SiJavascript />, <FaHtml5 />, <FaCss3 />]}
+                />
+                <ProjectCard
+                  number="7"
+                  inProgress={false}
+                  title="School Examination App"
+                  img={portrait}
+                  techstack={[
+                    <FaReact />,
+                    <SiTypescript />,
+                    <FaSass />,
+                    <SiFirebase />,
+                  ]}
                 />
               </Parallax>
             </div>
@@ -198,7 +212,12 @@ const ClassicRoute: NextPage = () => {
           <SocialList />
         </div>
         <div className={styles.cv}>
-          <Button text="Download CV" />
+          <Button
+            text="Get my CV"
+            onClick={() => {
+              window.location.assign("/assets/resume.pdf");
+            }}
+          />
         </div>
       </div>
     </ParallaxProvider>

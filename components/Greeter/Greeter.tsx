@@ -5,9 +5,12 @@ import styles from "./Greeter.module.scss";
 
 // Assets
 import hand from "../../public/assets/hand.png";
+import { FaChevronCircleDown } from "react-icons/fa";
+import { useState } from "react";
 
 const Greeter = () => {
   const router = useRouter();
+  const [wantApi, setWantsApi] = useState<Boolean>(false);
   return (
     <div className={styles.greeter}>
       <div className={styles.header}>
@@ -31,6 +34,15 @@ const Greeter = () => {
             router.push("/hello");
           }}
         />
+      </div>
+      <div
+        className={styles.api}
+        onClick={() => {
+          setWantsApi((prev) => true);
+        }}
+      >
+        <span>You can also try the API !</span>
+        <FaChevronCircleDown />
       </div>
     </div>
   );

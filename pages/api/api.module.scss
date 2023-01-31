@@ -1,0 +1,49 @@
+@import "../../styles/variables.module.scss";
+
+.apiRoute {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .token {
+    margin: 25px;
+  }
+  .consoleWrapper {
+    display: flex;
+    gap: 25px;
+    .requestList {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .console {
+      display: flex;
+      flex-direction: column;
+      .input {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .output {
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+          border-radius: $radius;
+          padding: $inner-padding;
+          cursor: pointer;
+          font-weight: 700;
+          transition-duration: $duration;
+          outline: none;
+          border-width: 2px;
+          border-style: solid;
+          resize: none;
+          height: 250px;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

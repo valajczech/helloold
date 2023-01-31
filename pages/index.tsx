@@ -1,16 +1,23 @@
 import type { NextPage } from "next";
 import { useTranslation } from "next-i18next";
 
+import styles from "./index.module.scss";
+
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Greeter from "../components/Greeter/Greeter";
-import ThemeToggler from "../components/ThemeToggler/ThemeToggler";
+import ApiRoute from "./api";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div>
-      <Greeter />
+    <div className={styles.index}>
+      <div className={styles.greeterWrapper}>
+        <Greeter />
+      </div>
+      <div className="api">
+        <ApiRoute />
+      </div>
     </div>
   );
 };

@@ -37,7 +37,7 @@ const ProjectCard = (props: IProjectCardProps) => {
       <div className={styles.image}>
         <Image src={props.img} />
         <div className={styles.readMore}>
-          <Button text="Read More" theme="light" />
+          <Button text="Read More" theme="mainColor" />
         </div>
       </div>
     </div>

@@ -126,5 +126,8 @@
   .cv {
     height: 30vh;
     margin: $outer-margin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
