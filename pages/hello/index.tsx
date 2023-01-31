@@ -123,20 +123,20 @@ const ClassicRoute: NextPage = () => {
                   title="BAIC.CZ"
                   img={baic}
                   techstack={[
-                    <FaReact />,
-                    <SiTypescript />,
-                    <FaSass />,
-                    <SiFirebase />,
-                    <SiSpring />,
+                    <FaReact key={"icon"} />,
+                    <SiTypescript key={"icon"} />,
+                    <FaSass key={"icon"} />,
+                    <SiFirebase key={"icon"} />,
+                    <SiSpring key={"icon"} />,
                   ]}
                 />
                 <ProjectCard
                   number="4"
                   techstack={[
-                    <FaReact />,
-                    <TbBrandNextjs />,
-                    <SiTypescript />,
-                    <FaSass />,
+                    <FaReact key={"icon"} />,
+                    <TbBrandNextjs key={"icon"} />,
+                    <SiTypescript key={"icon"} />,
+                    <FaSass key={"icon"} />,
                   ]}
                   inProgress
                   title="TALENSE"
@@ -145,10 +145,10 @@ const ClassicRoute: NextPage = () => {
                 <ProjectCard
                   number="6"
                   techstack={[
-                    <SiJavascript />,
-                    <FaCss3 />,
-                    <SiCsharp />,
-                    <SiDotnet />,
+                    <SiJavascript key={"icon"} />,
+                    <FaCss3 key={"icon"} />,
+                    <SiCsharp key={"icon"} />,
+                    <SiDotnet key={"icon"} />,
                   ]}
                   inProgress
                   title="ePIC by Twinformatics"
@@ -164,12 +164,12 @@ const ClassicRoute: NextPage = () => {
                   inProgress={false}
                   img={bures}
                   techstack={[
-                    <FaReact />,
-                    <SiJavascript />,
-                    <FaSass />,
-                    <FaHtml5 />,
-                    <FaCss3 />,
-                    <SiFirebase />,
+                    <FaReact key={"icon"} />,
+                    <SiJavascript key={"icon"} />,
+                    <FaSass key={"icon"} />,
+                    <FaHtml5 key={"icon"} />,
+                    <FaCss3 key={"icon"} />,
+                    <SiFirebase key={"icon"} />,
                   ]}
                 />
                 <ProjectCard
@@ -178,11 +178,11 @@ const ClassicRoute: NextPage = () => {
                   title="ACTIVITY REPORTING APP"
                   img={ar}
                   techstack={[
-                    <FaReact />,
-                    <SiTypescript />,
-                    <FaSass />,
-                    <SiFirebase />,
-                    <SiSpring />,
+                    <FaReact key={"icon"} />,
+                    <SiTypescript key={"icon"} />,
+                    <FaSass key={"icon"} />,
+                    <SiFirebase key={"icon"} />,
+                    <SiSpring key={"icon"} />,
                   ]}
                 />
                 <ProjectCard
@@ -190,7 +190,11 @@ const ClassicRoute: NextPage = () => {
                   inProgress={false}
                   title="TownOut"
                   img={townout}
-                  techstack={[<SiJavascript />, <FaHtml5 />, <FaCss3 />]}
+                  techstack={[
+                    <SiJavascript key={"icon"} />,
+                    <FaHtml5 key={"icon"} />,
+                    <FaCss3 key={"icon"} />,
+                  ]}
                 />
                 <ProjectCard
                   number="7"
@@ -198,10 +202,10 @@ const ClassicRoute: NextPage = () => {
                   title="School Examination App"
                   img={portrait}
                   techstack={[
-                    <FaReact />,
-                    <SiTypescript />,
-                    <FaSass />,
-                    <SiFirebase />,
+                    <FaReact key={"icon"} />,
+                    <SiTypescript key={"icon"} />,
+                    <FaSass key={"icon"} />,
+                    <SiFirebase key={"icon"} />,
                   ]}
                 />
               </Parallax>

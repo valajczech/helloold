@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Greeter from "../components/Greeter/Greeter";
-import ApiRoute from "./api";
+import ApiRoute from "./apiController";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
