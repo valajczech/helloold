@@ -1,0 +1,29 @@
+@import "../../styles/variables.module.scss";
+
+.commandline {
+  .outputs {
+    .history {
+      height: 95vh;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .list {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  .prompt {
+    display: flex;
+    gap: 10px;
+    input {
+      border: none;
+      padding: 0px;
+      background-color: transparent;
+      outline: none;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 15px;
+    }
+  }
+}

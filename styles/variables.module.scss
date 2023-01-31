@@ -1,0 +1,21 @@
+/* Utility classes*/
+.header_small {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+$duration: 0.5s;
+
+//! COLORS
+$main-blue: #0066ff;
+$main-blue-accent: #0066ff28;
+$white: #fff;
+$black: #000;
+$text-faded-gray: #616161;
+
+//! PX related vars
+$radius: 10px;
+$inner-padding: 10px;
+$classic-section-padding: 150px;
+$outer-margin: 15px;

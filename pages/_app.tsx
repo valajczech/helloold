@@ -1,8 +1,14 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import { appWithTranslation } from "next-i18next";
+import { Suspense } from "react";
+import { ThemeProvider } from "next-themes";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }: any) => (
+  <Suspense fallback="Loading...">
+    <ThemeProvider defaultTheme="dark">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  </Suspense>
+);
 
-export default MyApp
+export default appWithTranslation(MyApp);
