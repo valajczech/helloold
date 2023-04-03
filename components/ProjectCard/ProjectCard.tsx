@@ -1,6 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import Button from "../Button/Button";
 import styles from "./ProjectCard.module.scss";
+import { FaInfoCircle, FaLink } from "react-icons/fa";
+import { MdInfoOutline } from "react-icons/md";
+import Link from "next/link";
 
 interface IProjectCardProps {
   title: string;
@@ -9,6 +12,7 @@ interface IProjectCardProps {
   techstack?: Array<JSX.Element>;
   img: string | StaticImageData;
   inProgress: boolean;
+  demoURL?: string;
 }
 
 const ProjectCard = (props: IProjectCardProps) => {
@@ -33,12 +37,28 @@ const ProjectCard = (props: IProjectCardProps) => {
           </div>
         </div>
       </div>
-      <div className="desc">{props.shortDescription}</div>
+      <div className={styles.desc}>{props.shortDescription}</div>
       <div className={styles.image}>
         <Image src={props.img} />
-        <div className={styles.readMore}>
-          <Button text="Read More" theme="mainColorSolid" />
-        </div>
+      </div>
+      <div className={styles.readMore}>
+        {props.demoURL !== undefined ? (
+          <a href={props.demoURL} target={"_blank"}>
+            <span>
+              {" "}
+              <FaLink />
+              Live demo
+            </span>
+          </a>
+        ) : (
+          ""
+        )}
+        <Link href={""}>
+          <span>
+            <FaInfoCircle />
+            Learn more
+          </span>
+        </Link>
       </div>
     </div>
   );

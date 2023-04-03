@@ -18,18 +18,18 @@ const Greeter = () => {
           <span className={styles.header_small}>Hello!</span>
           <Image className={styles.hand} src={hand} />
         </div>
-        <span>What style you want to try?</span>
+        <span>How shall we proceed?</span>
       </div>
       <div className={styles.buttons}>
         <Button
-          text="CLI"
+          text="Quick contact!"
           onClick={() => {
-            router.push("/cmd");
+            // Do something
           }}
         />
         <span className={styles.or}>or</span>
         <Button
-          text="Classic"
+          text="Show me what you got! "
           onClick={() => {
             router.push("/hello");
           }}

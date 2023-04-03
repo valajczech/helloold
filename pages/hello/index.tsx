@@ -117,6 +117,7 @@ const ClassicRoute: NextPage = () => {
                   number="2"
                   inProgress={false}
                   title="BAIC.CZ"
+                  demoURL="https://baic.cz/"
                   img={baic}
                   techstack={[
                     <FaReact key={"icon"} />,
@@ -125,6 +126,7 @@ const ClassicRoute: NextPage = () => {
                     <SiFirebase key={"icon"} />,
                     <SiSpring key={"icon"} />,
                   ]}
+                  shortDescription="New company website for Ostrava based company B&A Insurance Consulting providing a new, modern user interface to get familiar with the company and the services they provide."
                 />
                 <ProjectCard
                   number="4"
@@ -137,18 +139,24 @@ const ClassicRoute: NextPage = () => {
                   inProgress
                   title="TALENSE"
                   img={talense}
+                  shortDescription={
+                    "A new social platform for bussinesses and workers smoothening out hiring processes as well as some certain work-related issues the modern world is currently facing."
+                  }
                 />
                 <ProjectCard
                   number="6"
-                  techstack={[
-                    <SiJavascript key={"icon"} />,
-                    <FaCss3 key={"icon"} />,
-                    <SiCsharp key={"icon"} />,
-                    <SiDotnet key={"icon"} />,
-                  ]}
-                  inProgress
-                  title="ePIC by Twinformatics"
+                  inProgress={false}
+                  title="School Examination App"
                   img={portrait}
+                  techstack={[
+                    <FaReact key={"icon"} />,
+                    <SiTypescript key={"icon"} />,
+                    <FaSass key={"icon"} />,
+                    <SiFirebase key={"icon"} />,
+                  ]}
+                  shortDescription={
+                    "Application for schools and teachers that help with examination and quizzes creation."
+                  }
                 />
               </Parallax>
             </div>
@@ -159,6 +167,7 @@ const ClassicRoute: NextPage = () => {
                   title="PORTFOLIO & CMS FOR PHOTOGRAPHER"
                   inProgress={false}
                   img={bures}
+                  demoURL="https://dmp-bures.web.app/"
                   techstack={[
                     <FaReact key={"icon"} />,
                     <SiJavascript key={"icon"} />,
@@ -167,6 +176,9 @@ const ClassicRoute: NextPage = () => {
                     <FaCss3 key={"icon"} />,
                     <SiFirebase key={"icon"} />,
                   ]}
+                  shortDescription={
+                    "Portfolio-based website and fully functional content management system for an amateur photographer, that can upload, manage and edit all the photos that the photographer wants to show the world."
+                  }
                 />
                 <ProjectCard
                   number="3"
@@ -180,10 +192,14 @@ const ClassicRoute: NextPage = () => {
                     <SiFirebase key={"icon"} />,
                     <SiSpring key={"icon"} />,
                   ]}
+                  shortDescription={
+                    "Application for tailored for specific needs of Ostrava based company B&A Insurance Consulting modernizing the old, Microsoft's Excel sheet based work hours storing."
+                  }
                 />
                 <ProjectCard
                   number="5"
                   inProgress={false}
+                  demoURL="https://townout.cz/"
                   title="TownOut"
                   img={townout}
                   techstack={[
@@ -191,18 +207,9 @@ const ClassicRoute: NextPage = () => {
                     <FaHtml5 key={"icon"} />,
                     <FaCss3 key={"icon"} />,
                   ]}
-                />
-                <ProjectCard
-                  number="7"
-                  inProgress={false}
-                  title="School Examination App"
-                  img={portrait}
-                  techstack={[
-                    <FaReact key={"icon"} />,
-                    <SiTypescript key={"icon"} />,
-                    <FaSass key={"icon"} />,
-                    <SiFirebase key={"icon"} />,
-                  ]}
+                  shortDescription={
+                    "Ecommerce solution for Prague based rental company specializing in renting caravans."
+                  }
                 />
               </Parallax>
             </div>
