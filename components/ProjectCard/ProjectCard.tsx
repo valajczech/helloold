@@ -43,7 +43,7 @@ const ProjectCard = (props: IProjectCardProps) => {
       </div>
       <div className={styles.readMore}>
         {props.demoURL !== undefined ? (
-          <a href={props.demoURL} target={"_blank"}>
+          <a href={props.demoURL} target={"_blank"} rel="noreferrer">
             <span>
               {" "}
               <FaLink />
