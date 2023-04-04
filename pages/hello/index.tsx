@@ -21,6 +21,8 @@ import ar from "../../public/assets/ar_miniature.png";
 import baic from "../../public/assets/baic_miniature.png";
 import bures from "../../public/assets/bures_miniature.png";
 import townout from "../../public/assets/townout_miniature.png";
+import talense from "../../public/assets/talense_miniature.png";
+
 // Animation libratires
 import { motion } from "framer-motion";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
@@ -72,30 +74,24 @@ const ClassicRoute: NextPage = () => {
             <span className={styles.header_small}>About.</span>
           </Parallax>
           <Parallax speed={10} className={styles.aboutText}>
+            <p>Hello,</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
+              I am a young, mostly self-learned fullstack developer with main
+              focus on Javascript/Typescript based technologies which im most
+              experienced in, but from time to time I wander to utterly
+              different stuff, for example Python or Arduino/Raspberry Pi.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
+              Mostly I specialize in building and deploying web applications,
+              but I have developed a few websites.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
+              Alongside building (web)applications, I am a total petrolhead and
+              I love cars & motorycles. I also do a fair bit of travelling and
+              adventurism.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem commodi animi quasi est veniam, ullam numquam harum
-              minus laudantium, nesciunt consectetur, ipsam explicabo nostrum id
-              iste repudiandae officia ex inventore?
-            </p>
+
+            <p>Scroll down to see my latest projects !</p>
           </Parallax>
           <Parallax speed={80}>
             <div className={styles.portraitWrapper}>
@@ -121,6 +117,7 @@ const ClassicRoute: NextPage = () => {
                   number="2"
                   inProgress={false}
                   title="BAIC.CZ"
+                  demoURL="https://baic.cz/"
                   img={baic}
                   techstack={[
                     <FaReact key={"icon"} />,
@@ -129,6 +126,7 @@ const ClassicRoute: NextPage = () => {
                     <SiFirebase key={"icon"} />,
                     <SiSpring key={"icon"} />,
                   ]}
+                  shortDescription="New company website for Ostrava based company B&A Insurance Consulting providing a new, modern user interface to get familiar with the company and the services they provide."
                 />
                 <ProjectCard
                   number="4"
@@ -140,19 +138,25 @@ const ClassicRoute: NextPage = () => {
                   ]}
                   inProgress
                   title="TALENSE"
-                  img={portrait}
+                  img={talense}
+                  shortDescription={
+                    "A new social platform for bussinesses and workers smoothening out hiring processes as well as some certain work-related issues the modern world is currently facing."
+                  }
                 />
                 <ProjectCard
                   number="6"
-                  techstack={[
-                    <SiJavascript key={"icon"} />,
-                    <FaCss3 key={"icon"} />,
-                    <SiCsharp key={"icon"} />,
-                    <SiDotnet key={"icon"} />,
-                  ]}
-                  inProgress
-                  title="ePIC by Twinformatics"
+                  inProgress={false}
+                  title="School Examination App"
                   img={portrait}
+                  techstack={[
+                    <FaReact key={"icon"} />,
+                    <SiTypescript key={"icon"} />,
+                    <FaSass key={"icon"} />,
+                    <SiFirebase key={"icon"} />,
+                  ]}
+                  shortDescription={
+                    "Application for schools and teachers that help with examination and quizzes creation."
+                  }
                 />
               </Parallax>
             </div>
@@ -163,6 +167,7 @@ const ClassicRoute: NextPage = () => {
                   title="PORTFOLIO & CMS FOR PHOTOGRAPHER"
                   inProgress={false}
                   img={bures}
+                  demoURL="https://dmp-bures.web.app/"
                   techstack={[
                     <FaReact key={"icon"} />,
                     <SiJavascript key={"icon"} />,
@@ -171,6 +176,9 @@ const ClassicRoute: NextPage = () => {
                     <FaCss3 key={"icon"} />,
                     <SiFirebase key={"icon"} />,
                   ]}
+                  shortDescription={
+                    "Portfolio-based website and fully functional content management system for an amateur photographer, that can upload, manage and edit all the photos that the photographer wants to show the world."
+                  }
                 />
                 <ProjectCard
                   number="3"
@@ -184,10 +192,14 @@ const ClassicRoute: NextPage = () => {
                     <SiFirebase key={"icon"} />,
                     <SiSpring key={"icon"} />,
                   ]}
+                  shortDescription={
+                    "Application for tailored for specific needs of Ostrava based company B&A Insurance Consulting modernizing the old, Microsoft's Excel sheet based work hours storing."
+                  }
                 />
                 <ProjectCard
                   number="5"
                   inProgress={false}
+                  demoURL="https://townout.cz/"
                   title="TownOut"
                   img={townout}
                   techstack={[
@@ -195,18 +207,9 @@ const ClassicRoute: NextPage = () => {
                     <FaHtml5 key={"icon"} />,
                     <FaCss3 key={"icon"} />,
                   ]}
-                />
-                <ProjectCard
-                  number="7"
-                  inProgress={false}
-                  title="School Examination App"
-                  img={portrait}
-                  techstack={[
-                    <FaReact key={"icon"} />,
-                    <SiTypescript key={"icon"} />,
-                    <FaSass key={"icon"} />,
-                    <SiFirebase key={"icon"} />,
-                  ]}
+                  shortDescription={
+                    "Ecommerce solution for Prague based rental company specializing in renting caravans."
+                  }
                 />
               </Parallax>
             </div>

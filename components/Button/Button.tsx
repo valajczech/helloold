@@ -9,7 +9,7 @@ interface IButtonProps {
   link?: string;
   isSubmit?: boolean;
   onClick?: () => any;
-  theme?: "mainColor" | "dark" | "light";
+  theme?: "mainColor" | "mainColorSolid" | "dark" | "light";
 }
 
 const Button = (props: IButtonProps) => {
@@ -18,6 +18,19 @@ const Button = (props: IButtonProps) => {
       return (
         <button
           className={style.button}
+          onClick={() => {
+            props.onClick != undefined ? props.onClick() : "";
+          }}
+        >
+          {props.icon}
+          {props.text}
+        </button>
+      );
+    }
+    case "mainColorSolid": {
+      return (
+        <button
+          className={style.buttonSolid}
           onClick={() => {
             props.onClick != undefined ? props.onClick() : "";
           }}
