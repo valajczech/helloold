@@ -6,10 +6,19 @@ import styles from "./index.module.scss";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Greeter from "../components/Greeter/Greeter";
 import ApiRoute from "./apiController";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
+  const router = useRouter();
 
+  useEffect(() => {
+    router.push("/hello");
+  });
+  return null;
+};
+/*
   return (
     <div className={styles.index}>
       <div className={styles.greeterWrapper}>
@@ -21,6 +30,7 @@ const Home: NextPage = () => {
     </div>
   );
 };
+*/
 export async function getStaticProps({ locale }: any) {
   return {
     props: {

@@ -22,6 +22,7 @@ import baic from "../../public/assets/baic_miniature.png";
 import bures from "../../public/assets/bures_miniature.png";
 import townout from "../../public/assets/townout_miniature.png";
 import talense from "../../public/assets/talense_miniature.png";
+import reviizio from "../../public/assets/Revizio.png";
 
 // Animation libratires
 import { motion } from "framer-motion";
@@ -145,6 +146,21 @@ const ClassicRoute: NextPage = () => {
                 />
                 <ProjectCard
                   number="6"
+                  inProgress={true}
+                  title="Revizio"
+                  img={reviizio}
+                  demoURL="https://revizio.app/"
+                  techstack={[
+                    <FaReact key={"icon"} />,
+                    <SiTypescript key={"icon"} />,
+                    <FaSass key={"icon"} />,
+                  ]}
+                  shortDescription={
+                    "Application providing modern approach for revision technicians and their customers."
+                  }
+                />
+                {/*<ProjectCard
+                  number="6"
                   inProgress={false}
                   title="School Examination App"
                   img={portrait}
@@ -157,7 +173,7 @@ const ClassicRoute: NextPage = () => {
                   shortDescription={
                     "Application for schools and teachers that help with examination and quizzes creation."
                   }
-                />
+                />*/}
               </Parallax>
             </div>
             <div className={styles.right}>
